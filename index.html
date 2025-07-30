@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mi Lista de Tareas</title>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="bi bi-check-circle-fill me-2"></i>Mi Lista de Tareas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tareas">Tareas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agregar">Agregar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container main-content">
+        <!-- Inicio -->
+        <section id="inicio" class="py-5 text-center">
+            <h1 class="display-4 mb-4">
+                <i class="bi bi-list-task text-primary"></i>
+                Bienvenido a tu Lista de Tareas
+            </h1>
+            <p class="lead">Organiza tus actividades de manera fácil y sencilla</p>
+        </section>
+
+        <!-- Btn agregar -->
+        <section id="agregar" class="py-4">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4">
+                                <i class="bi bi-plus-circle text-success"></i>
+                                Agregar Nueva Tarea
+                            </h3>
+                            <div id="alertaExito" class="alert alert-success alert-dismissible fade" role="alert" style="display: none;">
+                                <i class="bi bi-check-circle-fill"></i>
+                                ¡Tarea agregada exitosamente!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                            <form id="formularioTarea">
+                                <div class="mb-3">
+                                    <label for="inputTarea" class="form-label">Nueva Tarea:</label>
+                                    <input type="text" class="form-control" id="inputTarea" placeholder="Escribe aquí tu tarea..." required />
+                                    <div class="invalid-feedback">Por favor, escribe una tarea válida.</div>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-success btn-lg">
+                                        <i class="bi bi-plus-lg"></i> Agregar Tarea
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista Task -->
+        <section id="tareas" class="py-4">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h3 class="text-center mb-4">
+                        <i class="bi bi-list-ul text-info"></i> Mis Tareas
+                    </h3>
+                    <div id="listaTareas" class="list-group">
+                        <div class="list-group-item text-center text-muted">
+                            <i class="bi bi-inbox display-6"></i>
+                            <p class="mt-2">No hay tareas todavía. ¡Agrega tu primera tarea!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-2">&copy; 2024 - Creado por <strong>Tu Nombre Aquí</strong></p>
+            <div>
+                <a href="https://linkedin.com/in/tu-perfil" class="text-white me-3" target="_blank">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/tu-usuario" class="text-white" target="_blank">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

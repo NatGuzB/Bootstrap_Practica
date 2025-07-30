@@ -1,6 +1,7 @@
 let tareas = [];
 let contadorTareas = 0;
 
+//Funcion alerta
 function mostrarAlerta() {
     const alerta = document.getElementById('alertaExito');
     alerta.style.display = 'block';
@@ -14,6 +15,7 @@ function mostrarAlerta() {
     }, 3000);
 }
 
+//Renderizar tarea
 function renderizarTareas() {
     const listaTareas = document.getElementById('listaTareas');
     if (tareas.length === 0) {
@@ -44,6 +46,7 @@ function renderizarTareas() {
     listaTareas.innerHTML = html;
 }
 
+//Agregar tarea
 function agregarTarea(textoTarea) {
     if (textoTarea.trim() === '') {
         return false;
@@ -60,6 +63,7 @@ function agregarTarea(textoTarea) {
     return true;
 }
 
+//Eliminar tarea
 function eliminarTarea(id) {
     if (confirm('¿Estás seguro de que quieres eliminar esta tarea?')) {
         tareas = tareas.filter(tarea => tarea.id !== id);
